@@ -1,6 +1,8 @@
 plugins {
     id("java")
     kotlin("jvm") version "1.8.21"
+    id("org.jlleitschuh.gradle.ktlint") version "11.3.2"
+    application
 }
 
 group = "org.yash10019coder"
@@ -21,4 +23,8 @@ tasks.test {
 }
 kotlin {
     jvmToolchain(11)
+}
+
+application {
+    mainClass.set("MainKt")
 }

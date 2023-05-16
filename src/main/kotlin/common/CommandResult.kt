@@ -1,4 +1,4 @@
-package command
+package common
 
 data class CommandResult(
     val exitCode: Int,
