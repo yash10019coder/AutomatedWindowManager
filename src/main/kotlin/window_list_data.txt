@@ -1,0 +1,8 @@
+0x03000003  0 ubuntu-linux Prajwal Rudrakshi - 0chain - 12 new items - Slack
+0x05000003  0 ubuntu-linux Spotify
+0x02a0000c  0 ubuntu-linux Control Panel
+0x05c00003 -1 ubuntu-linux @!0,0;BDHF
+0x06000003  0 ubuntu-linux Mise-En-Place Personal Productivity System | Trello
+0x07a0004c  1 ubuntu-linux AutomatedWindowManager – Wmctrl.kt [AutomatedWindowManager.main]
+0x05e00010  1 ubuntu-linux ubuntu@ubuntu-linux: ~
+0x08600003  0 ubuntu-linux Learn Rust - Rust Programming Language - Google Chrome
