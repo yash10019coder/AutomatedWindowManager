@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05e4a7fb-6b7f-450e-9d10-14cf681e1951" name="Changes" comment="* added ktlint in the project.&#10;* changed some package names.&#10;* created file utils for file read and write.&#10;* added application plugin in gradle.&#10;* using CommandExecutor to execute commands.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="05e4a7fb-6b7f-450e-9d10-14cf681e1951" name="Changes" comment="* added additional commands for window viewing and checking current state.&#10;* by default now all the window lists are sorted by the workspace number.&#10;* timestamps are also printed for every save and restore.">
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -39,6 +42,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="true" />
@@ -49,25 +53,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/ubuntu/automated_window_management/AutomatedWindowManager/AutomatedWindowManager/src/test/kotlin&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "last_opened_file_path": "/home/ubuntu/automated_window_management/AutomatedWindowManager/AutomatedWindowManager/src/test/kotlin",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/kotlin" />
@@ -83,17 +86,18 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="./gradlew :tasks" />
-      <command value="./gradlew :assembleDist" />
       <command value="./gradlew :assemble" />
       <command value="./gradlew :installDist" />
       <command value="./gradlew tasks" />
-      <command value="./gradlew ktlintFormat" />
-      <command value="./gradlew ktlintCheck" />
+      <command value="/usr/lib/jvm/java-11-openjdk-amd64" />
       <command value="./gradlew javaToolchains" />
+      <command value="./gradlew :assembleDist" />
+      <command value="./gradlew ktlintCheck" />
+      <command value="./gradlew ktlintFormat" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.AutomatedWindowManager [javaToolchains]">
-    <configuration name="AutomatedWindowManager [:assemble]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.AutomatedWindowManager [:assembleDist]">
+    <configuration name="AutomatedWindowManager [:assembleDist]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -104,29 +108,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":assemble" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="AutomatedWindowManager [:installDist]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":installDist" />
+            <option value=":assembleDist" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -203,13 +185,35 @@
       <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
+    <configuration name="AutomatedWindowManager [tasks]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="tasks" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AutomatedWindowManager [:assembleDist]" />
+        <item itemvalue="Gradle.AutomatedWindowManager [tasks]" />
         <item itemvalue="Gradle.AutomatedWindowManager [javaToolchains]" />
         <item itemvalue="Gradle.AutomatedWindowManager [ktlintFormat]" />
         <item itemvalue="Gradle.AutomatedWindowManager [ktlintCheck]" />
-        <item itemvalue="Gradle.AutomatedWindowManager [:installDist]" />
-        <item itemvalue="Gradle.AutomatedWindowManager [:assemble]" />
       </list>
     </recent_temporary>
   </component>
@@ -226,7 +230,10 @@
       <workItem from="1683435521528" duration="18000" />
       <workItem from="1684199271794" duration="4588000" />
       <workItem from="1684203875325" duration="5904000" />
-      <workItem from="1684215632456" duration="14000" />
+      <workItem from="1684215632456" duration="1433000" />
+      <workItem from="1687777628006" duration="164000" />
+      <workItem from="1690091908540" duration="369000" />
+      <workItem from="1690092289424" duration="4043000" />
     </task>
     <task id="LOCAL-00001" summary="* added CommandExecutor&#10;* added wmctrl client.">
       <created>1684202987281</created>
@@ -249,7 +256,22 @@
       <option name="project" value="LOCAL" />
       <updated>1684215461825</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="* added ktlint in the project.&#10;* changed some package names.&#10;* created file utils for file read and write.&#10;* added application plugin in gradle.&#10;* using CommandExecutor to execute commands.">
+      <created>1684215743018</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684215743018</updated>
+    </task>
+    <task id="LOCAL-00005" summary="* added additional commands for window viewing and checking current state.&#10;* by default now all the window lists are sorted by the workspace number.&#10;* timestamps are also printed for every save and restore.">
+      <option name="closed" value="true" />
+      <created>1690096194890</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1690096194890</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +280,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="* added CommandExecutor&#10;* added wmctrl client." />
     <MESSAGE value="* added ktlint in the project.&#10;* changed some package names.&#10;* created file utils for file read and write.&#10;* added application plugin in gradle.&#10;* using CommandExecutor to execute commands." />
-    <option name="LAST_COMMIT_MESSAGE" value="* added ktlint in the project.&#10;* changed some package names.&#10;* created file utils for file read and write.&#10;* added application plugin in gradle.&#10;* using CommandExecutor to execute commands." />
+    <MESSAGE value="* added additional commands for window viewing and checking current state.&#10;* by default now all the window lists are sorted by the workspace number.&#10;* timestamps are also printed for every save and restore." />
+    <option name="LAST_COMMIT_MESSAGE" value="* added additional commands for window viewing and checking current state.&#10;* by default now all the window lists are sorted by the workspace number.&#10;* timestamps are also printed for every save and restore." />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>

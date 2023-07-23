@@ -2,21 +2,39 @@ fun main(args: Array<String>) {
     val wmctrlClient = WmctrlClient()
 
     if (args.size != 1) {
-        printHelp()  
+        printHelp()
         return
     }
     val arg = args[0]
 
-    if (arg == "--save") {
-        wmctrlClient.saveCurrentWindowsState()
-    } else if (arg == "--restore") {
-        wmctrlClient.restoreWindowStates()
-    } else if(arg == "--help" || arg=="-h") {
-        printHelp()
+    when (arg) {
+        "--save" -> {
+            wmctrlClient.saveCurrentWindowsState()
+        }
+        "--restore" -> {
+            wmctrlClient.restoreWindowStates()
+        }
+        "--list" -> {
+            println("Window states:")
+            wmctrlClient.getAllWindows().forEach { windowModel ->
+                println(windowModel)
+            }
+        }
+        "--printnewwindowidwitholdstate" -> {
+            println("Window IDs:")
+            wmctrlClient.getNewWindowIdsWithOldState().forEach { windowModel ->
+                println(windowModel)
+            }
+        }
+        else -> {
+            println("Invalid argument $arg")
+            printHelp()
+        }
     }
-        
+
 }
- fun printHelp(){
-     println("Automated Workspace Manager for Linux 1.0")
-     println("Usage: AutomatedWindowManager --save | --restore")
+
+fun printHelp() {
+    println("Automated Workspace Manager for Linux 1.0")
+    println("Usage: AutomatedWindowManager --save | --restore| --list | --printnewwindowidwitholdstate")
 }
