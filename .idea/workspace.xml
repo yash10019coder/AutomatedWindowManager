@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05e4a7fb-6b7f-450e-9d10-14cf681e1951" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/configs/Config.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/logger/Logger.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/logger/LoggerImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinScripting.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="05e4a7fb-6b7f-450e-9d10-14cf681e1951" name="Changes" comment="* nit fixes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/WmctrlClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/WmctrlClient.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/common/FileUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/common/FileUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,10 +64,15 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Gradle.AutomatedWindowManager [:assembleDist].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AutomatedWindowManager [:distTar].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AutomatedWindowManager [:distZip].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AutomatedWindowManager [assemble].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AutomatedWindowManager [tasks].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
@@ -108,15 +105,18 @@
       <command value="./gradlew :tasks" />
       <command value="./gradlew :assemble" />
       <command value="./gradlew :installDist" />
-      <command value="./gradlew tasks" />
       <command value="/usr/lib/jvm/java-11-openjdk-amd64" />
       <command value="./gradlew javaToolchains" />
       <command value="./gradlew ktlintCheck" />
       <command value="./gradlew ktlintFormat" />
       <command value="./gradlew :assembleDist" />
+      <command value="./gradlew tasks" />
+      <command value="./gradlew :distTar" />
+      <command value="./gradlew :distZip" />
+      <command value="./gradlew assemble" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.AutomatedWindowManager [:assembleDist]">
+  <component name="RunManager" selected="Gradle.AutomatedWindowManager [assemble]">
     <configuration name="AutomatedWindowManager [:assembleDist]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -139,7 +139,7 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="AutomatedWindowManager [javaToolchains]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AutomatedWindowManager [:distTar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -150,7 +150,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="javaToolchains" />
+            <option value=":distTar" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -161,7 +161,7 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="AutomatedWindowManager [ktlintCheck]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AutomatedWindowManager [:distZip]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -172,7 +172,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="ktlintCheck" />
+            <option value=":distZip" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -183,7 +183,7 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="AutomatedWindowManager [ktlintFormat]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AutomatedWindowManager [assemble]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -194,7 +194,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="ktlintFormat" />
+            <option value="assemble" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -229,11 +229,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AutomatedWindowManager [assemble]" />
+        <item itemvalue="Gradle.AutomatedWindowManager [:distZip]" />
+        <item itemvalue="Gradle.AutomatedWindowManager [:distTar]" />
         <item itemvalue="Gradle.AutomatedWindowManager [:assembleDist]" />
         <item itemvalue="Gradle.AutomatedWindowManager [tasks]" />
-        <item itemvalue="Gradle.AutomatedWindowManager [javaToolchains]" />
-        <item itemvalue="Gradle.AutomatedWindowManager [ktlintFormat]" />
-        <item itemvalue="Gradle.AutomatedWindowManager [ktlintCheck]" />
       </list>
     </recent_temporary>
   </component>
@@ -263,6 +263,8 @@
       <workItem from="1699468863380" duration="141000" />
       <workItem from="1705159959862" duration="2059000" />
       <workItem from="1705408991024" duration="101000" />
+      <workItem from="1705409116074" duration="1941000" />
+      <workItem from="1705415973081" duration="372000" />
     </task>
     <task id="LOCAL-00001" summary="* added CommandExecutor&#10;* added wmctrl client.">
       <created>1684202987281</created>
@@ -316,7 +318,31 @@
       <option name="project" value="LOCAL" />
       <updated>1690096371300</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="* added logging classes.&#10;* added a time delay for restoring windows.">
+      <option name="closed" value="true" />
+      <created>1705409207185</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1705409207185</updated>
+    </task>
+    <task id="LOCAL-00009" summary="* added logging classes.&#10;* added a time delay for restoring windows.">
+      <option name="closed" value="true" />
+      <created>1705409241852</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1705409241852</updated>
+    </task>
+    <task id="LOCAL-00010" summary="* nit fixes.">
+      <option name="closed" value="true" />
+      <created>1705409400275</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1705409400275</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,7 +363,9 @@
     <MESSAGE value="* added CommandExecutor&#10;* added wmctrl client." />
     <MESSAGE value="* added ktlint in the project.&#10;* changed some package names.&#10;* created file utils for file read and write.&#10;* added application plugin in gradle.&#10;* using CommandExecutor to execute commands." />
     <MESSAGE value="* added additional commands for window viewing and checking current state.&#10;* by default now all the window lists are sorted by the workspace number.&#10;* timestamps are also printed for every save and restore." />
-    <option name="LAST_COMMIT_MESSAGE" value="* added additional commands for window viewing and checking current state.&#10;* by default now all the window lists are sorted by the workspace number.&#10;* timestamps are also printed for every save and restore." />
+    <MESSAGE value="* added logging classes.&#10;* added a time delay for restoring windows." />
+    <MESSAGE value="* nit fixes." />
+    <option name="LAST_COMMIT_MESSAGE" value="* nit fixes." />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
@@ -353,7 +381,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/Main.kt</url>
-          <line>11</line>
+          <line>33</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
