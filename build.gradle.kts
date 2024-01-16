@@ -21,9 +21,6 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
-kotlin {
-    jvmToolchain(11)
-}
 
 application {
     mainClass.set("MainKt")

@@ -2,6 +2,7 @@ import common.CommandExecutorImpl
 import common.FileUtils
 import model.CommandModel
 import model.WindowModel
+import java.io.File
 import java.util.*
 
 const val workingDirectory = "/home/ubuntu/.wmctrl"
@@ -75,6 +76,7 @@ class WmctrlClient {
             println("Restoring window states $currentDateTime")
             windowModels.forEach { windowModel ->
                 moveWindow(windowModel, windowModel.workspace)
+                Thread.sleep(1000)
             }
         } catch (e: Exception) {
             e.printStackTrace()
