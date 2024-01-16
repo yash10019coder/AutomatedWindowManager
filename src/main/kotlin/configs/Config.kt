@@ -23,6 +23,6 @@ class Config {
     }
 
     fun save() {
-        properties.store(javaClass.classLoader.getResourceAsStream(FILE_NAME), null)
+//        properties.store(javaClass.classLoader.getResourceAsStream(FILE_NAME), null)
     }
 }
